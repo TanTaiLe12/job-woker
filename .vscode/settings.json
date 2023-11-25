@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.tabSize": 2,
+  // Runs Prettier, then ESLint
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+  "[javascript, jsx, js, json, yml]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": [
+    "antd",
+    "JOBPAY",
+    "infor",
+    "Reigster",
+    "reduxjs",
+    "cyurica",
+    "splidejs",
+    "splide",
+    "infordetail"
+  ]
+}
