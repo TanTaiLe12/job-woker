@@ -12,15 +12,5 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": [
-    "antd",
-    "JOBPAY",
-    "infor",
-    "Reigster",
-    "reduxjs",
-    "cyurica",
-    "splidejs",
-    "splide",
-    "infordetail"
-  ]
+  "cSpell.words": []
 }
