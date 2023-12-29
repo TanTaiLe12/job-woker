@@ -5,13 +5,12 @@ const StyledNavigateBanner = styled.div`
     display: flex;
     width: 100%;
     max-width: 1240px;
-    margin: 0 auto;
+    margin: 0 auto -85px;
     padding: 0 20px;
     gap: 20px;
     transform: translateY(-137px);
     &__item {
-      height: 100%;
-      width: 25%;
+      width: calc(100% - 10px);
       border-radius: 16px;
       box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
       background-color: #fff;
@@ -33,6 +32,22 @@ const StyledNavigateBanner = styled.div`
         padding: 12px 12px 30px;
         font-size: 1.6rem;
         font-weight: bold;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      overflow: scroll;
+      margin-bottom: -50px;
+      transform: translateY(-60px);
+      gap: 10px;
+      padding-bottom: 20px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &__item {
+        min-width: 160px;
+        &--text {
+          font-size: 14px;
+        }
       }
     }
   }

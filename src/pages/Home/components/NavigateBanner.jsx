@@ -1,37 +1,18 @@
-import React, { forwardRef } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import config from '../../../config';
+import { StyledNavigateBanner } from '../styled';
 
-const homeConfig = config.homeConfig;
-
-const NavigateBanner = forwardRef(({ images }, ref) => {
+const NavigateBanner = ({ data, onThumbs }) => {
   return (
-    <Splide
-      options={{
-        fixedWidth: 100,
-        fixedHeight: 60,
-        gap: 10,
-        rewind: true,
-        pagination: false,
-        isNavigation: true,
-        breakpoints: {
-          600: {
-            fixedWidth: 60,
-            fixedHeight: 44,
-          },
-        },
-      }}
-    >
-      {homeConfig.menuServices.map((item, index) => (
-        <SplideSlide key={index}>
-          <div className='navi__item'>
+    <StyledNavigateBanner>
+      <div className='navi'>
+        {data.map((item, index) => (
+          <div className='navi__item' key={index} onClick={() => onThumbs(index)}>
             <img src={item.img} alt={item.title} />
             <p className='navi__item--text'>{item.title}</p>
           </div>
-        </SplideSlide>
-      ))}
-    </Splide>
+        ))}
+      </div>
+    </StyledNavigateBanner>
   );
-});
+};
 
 export default NavigateBanner;
