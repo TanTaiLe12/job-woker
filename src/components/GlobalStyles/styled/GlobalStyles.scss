@@ -45,6 +45,9 @@ a {
     color: #011d79;
     font-weight: bold;
     text-align: center;
+    &.left {
+      text-align: left;
+    }
   }
   @media screen and (max-width: 768px) {
     &-2 {
@@ -60,16 +63,17 @@ a {
   justify-content: center;
   align-items: center;
   max-width: 360px;
+  width: 100%;
   min-height: 48px;
   margin: 0 auto;
   padding: 10px;
   background-color: #082680;
+  border: 1px solid #082680;
   color: #fff;
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
   outline: none;
-  border: none;
   border-radius: 8px;
   &:hover {
     &::before {
@@ -115,6 +119,15 @@ a {
       transition: right 0.3s ease-out;
     }
   }
+  &__product {
+    width: 50%;
+    min-height: 64px;
+    font-size: 24px;
+    &.white {
+      background-color: #fff;
+      color: #082680;
+    }
+  }
   @media screen and (max-width: 768px) {
     font-size: 14px;
     min-height: 40px;
@@ -129,6 +142,12 @@ a {
 }
 
 .box--btn {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 570px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
   text-align: center;
 }
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const StyledHome = styled.div`
-  h1 {
-    color: red;
+  .keyv {
+    margin-bottom: 40px;
   }
   .bnr-keyv {
     img {
@@ -78,6 +78,101 @@ const StyledHome = styled.div`
         width: 100%;
         padding: 0 20px;
       }
+    }
+    &-hotline {
+      position: relative;
+      background-image: url('/src/assets/common/home/bnr_hotline.png');
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: 1119px 375px;
+      border-radius: 32px;
+      box-shadow: 0 20px 25px -5px #0000001a, 0 10px 10px -5px #0000000a;
+      height: 375px;
+      margin: 0 auto 100px;
+      max-width: 1119px;
+      .btn-hotline {
+        align-items: center;
+        background: #082680;
+        box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -2px #0000000d;
+        color: #fff;
+        display: flex;
+        position: absolute;
+        grid-gap: 36px;
+        border-radius: 16px;
+        bottom: 48px;
+        gap: 36px;
+        height: 96px;
+        left: 64px;
+        padding: 16px 49px;
+        width: 384px;
+        &--icon {
+          width: 25px;
+          height: 25px;
+        }
+        &__content {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          grid-gap: 5px;
+          gap: 5px;
+          font-weight: bold;
+          &--text {
+            font-size: 32px;
+            line-height: 1.2;
+          }
+          &--note {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &-article {
+      .inner {
+        margin: 0 auto;
+        max-width: 1260px;
+        width: 100%;
+        padding: 0 20px;
+      }
+      .block-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .headline-2 {
+          margin-bottom: 0;
+        }
+        .txt-link {
+          position: relative;
+          padding-right: 15px;
+          color: #3b82f6;
+          font-size: 14px;
+          display: inline-block;
+          text-decoration: underline;
+          line-height: 1.1;
+          transition: all 0.3s linear;
+          &:hover {
+            text-decoration: none;
+            &::before {
+              right: 0;
+            }
+          }
+          &::before {
+            position: absolute;
+            content: '';
+            border-right: 2px solid #3b82f6;
+            border-top: 2px solid #3b82f6;
+            top: 50%;
+            right: 5px;
+            width: 5px;
+            height: 5px;
+            transform: translateY(-50%) rotate(45deg);
+            transition: right 0.3s ease-out;
+          }
+        }
+      }
+    }
+    .slider-list {
+      display: flex;
     }
   }
   .list-commit {
@@ -162,6 +257,19 @@ const StyledHome = styled.div`
       }
     }
   }
+  .list-article {
+    .splide__slide {
+      min-width: 132px;
+    }
+  }
+  .main-carousel {
+    .splide__slide {
+      img {
+        height: 409px !important;
+        object-fit: cover;
+      }
+    }
+  }
   @media screen and (max-width: 768px) {
     .list-commit {
       margin: 0 auto 30px;
@@ -226,6 +334,55 @@ const StyledHome = styled.div`
       }
       &-review {
         padding-bottom: 40px;
+      }
+      &-hotline {
+        background-image: url('/src/assets/common/home/bnr_hotline_sp.png');
+        background-size: 328px 156px;
+        border-radius: 24px;
+        box-shadow: 0 5.86238px 7.32797px -1.46559px #0000001a,
+          0 2.93119px 2.93119px -1.46559px #0000000a;
+        height: 156px;
+        margin: 0 auto 40px;
+        max-width: 328px;
+        .btn-hotline {
+          grid-gap: 15px;
+          border-radius: 5px;
+          bottom: 10px;
+          gap: 15px;
+          height: 32px;
+          left: 20px;
+          padding: 5px 5px 5px 10px;
+          width: 120px;
+          &--icon {
+            width: 10px;
+            height: 10px;
+          }
+          &__content {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            grid-gap: 5px;
+            gap: 0;
+            font-weight: bold;
+            &--text {
+              font-size: 12px;
+              line-height: 1.1;
+            }
+            &--note {
+              font-size: 10px;
+              line-height: 1.1;
+            }
+          }
+        }
+      }
+    }
+    .main-carousel {
+      .splide__slide {
+        img {
+          height: 46svw !important;
+          max-height: 295px;
+          object-fit: contain;
+        }
       }
     }
   }
